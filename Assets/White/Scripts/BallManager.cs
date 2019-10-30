@@ -13,21 +13,11 @@ namespace White {
         public float killPlane;
         bool isDead = false;
 
-        public int ballsLeft = 2;
-        Text text;
-
-        void Start()
-        {
-            text = GetComponent<Text>();
-        }
-
         void Update()
         {
             BallIsDead();
 
-            if (isDead) LoseBall();
-
-            text.text = "Balls Left: " + ballsLeft;
+            if (isDead) BallsLeft.LoseBall();
         }
 
         public void Spawn()
@@ -54,12 +44,6 @@ namespace White {
                 isDead = true;
                 Destroy(ball);
             }
-        }
-
-        public void LoseBall()
-        {
-            ballsLeft--;
-            if (ballsLeft < 0) ballsLeft = 0;
         }
     }
 }
