@@ -7,7 +7,7 @@ namespace White {
     public class BallManager : MonoBehaviour
     {
         public GameObject ball;
-
+        
         bool stopSpawning = false;
 
         public float killPlane;
@@ -25,6 +25,7 @@ namespace White {
             Instantiate(ball, transform.position, transform.rotation);
             isDead = false;
             stopSpawning = true;
+
             if (stopSpawning)
             {
                 isDead = false;

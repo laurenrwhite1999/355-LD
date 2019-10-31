@@ -20,7 +20,7 @@ namespace White
 
             force.Normalize();
 
-            collision.rigidbody.AddForce(force * 10, ForceMode.Impulse);
+            collision.rigidbody.AddForce(force * 5, ForceMode.Impulse);
 
             ScoreManager.score++;
         }
